@@ -10,6 +10,10 @@ import rateLimit from "express-rate-limit";
 const port = process.env.PORT || 4000;
 const app = express();
 
+const corsOptions = {
+  origin: "https://posters.onrender.com/", // frontend URI (ReactJS)
+};
+
 app.use(
   helmet.contentSecurityPolicy({
     directives: {
@@ -26,7 +30,7 @@ app.use(
   })
 );
 
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(express.json());
 app.use(compression());
 

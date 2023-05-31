@@ -30,7 +30,7 @@ export default function NewPoster() {
 
     if (info.name === "") info.name = null;
 
-    const response = await fetch("http://localhost:4000/api/posts", {
+    const response = await fetch("https://posters-srv.onrender.com/api/posts", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(info),

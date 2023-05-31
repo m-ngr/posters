@@ -7,7 +7,7 @@ export default function Home() {
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const res = await fetch("http://localhost:4000/api/posts");
+      const res = await fetch("https://posters-srv.onrender.com/api/posts");
 
       if (res.ok) {
         const data = await res.json();
