@@ -11,7 +11,7 @@ const port = process.env.PORT || 4000;
 const app = express();
 
 const corsOptions = {
-  origin: "https://posters.onrender.com/", // frontend URI (ReactJS)
+  origin: "https://posters.onrender.com",
 };
 
 app.use(
